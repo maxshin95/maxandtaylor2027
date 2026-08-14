@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//maxandtaylor2027.com//Wedding//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:wedding-20270529@maxandtaylor2027.com
+DTSTAMP:20260813T120000Z
+DTSTART;VALUE=DATE:20270529
+DTEND;VALUE=DATE:20270530
+SUMMARY:Taylor & Max's Wedding
+LOCATION:The Willows\, 490 Darby Paoli Rd\, Villanova\, PA 19085
+DESCRIPTION:Ceremony\, cocktails\, dinner\, and dancing. Exact times will arrive with your invitation. Details: https://maxandtaylor2027.com
+URL:https://maxandtaylor2027.com
+END:VEVENT
+END:VCALENDAR
