@@ -4,8 +4,8 @@
 
   document.documentElement.classList.remove('no-js');
 
-  /* ---- countdown (pinned to 4 PM ET on the wedding day) ---- */
-  var target = new Date('2027-05-29T16:00:00-04:00');
+  /* ---- countdown (against midnight ET on the wedding day) ---- */
+  var target = new Date('2027-05-29T00:00:00-04:00');
   var el = document.getElementById('countdown');
   function renderCountdown() {
     var now = new Date();
@@ -47,7 +47,7 @@
     lbImg.src = img.getAttribute('data-full') || img.currentSrc || img.src;
     lbImg.alt = img.alt;
   }
-  if (box && lbImg && buttons.length) {
+  if (box && typeof box.showModal === 'function' && lbImg && buttons.length) {
     buttons.forEach(function (btn, i) {
       btn.addEventListener('click', function () { show(i); box.showModal(); });
     });
