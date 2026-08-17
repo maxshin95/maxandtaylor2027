@@ -330,13 +330,15 @@ html:not(.no-js) .in{ opacity:1; transform:none; }
 .field input::placeholder{ color:rgba(46,53,32,.38); }
 .field-row{ display:grid; grid-template-columns:1fr; gap:0 .8rem; }
 @media (min-width:560px){ .field-row{ grid-template-columns:2fr .8fr .9fr; } }
-fieldset.choice{ border:0; padding:0; }
-.pill{ display:inline-flex; margin:0 .5rem .5rem 0; cursor:pointer; }
-.pill input{ position:absolute; opacity:0; width:1px; height:1px; }
+fieldset.choice{ border:0; padding:0; min-width:0; }
+.pills{ display:flex; flex-wrap:wrap; gap:.6rem; }
+.pill{ position:relative; display:inline-flex; cursor:pointer; line-height:1.2; }
+.pill input{ position:absolute; opacity:0; width:1px; height:1px; margin:0; }
 .pill span{
+  display:inline-block; white-space:nowrap;
   font-size:.82rem; letter-spacing:.14em; text-transform:uppercase; font-weight:500;
   color:var(--olive); border:1px solid var(--hairline); border-radius:999px;
-  padding:.6rem 1.05rem; transition:background .2s, color .2s, border-color .2s;
+  padding:.65rem 1.05rem; transition:background .2s, color .2s, border-color .2s;
 }
 .pill input:checked + span{ background:var(--olive); color:var(--cream); border-color:var(--olive); }
 .pill input:focus-visible + span{ box-shadow:0 0 0 3px rgba(96,109,46,.25); }
