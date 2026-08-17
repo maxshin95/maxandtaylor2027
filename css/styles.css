@@ -354,3 +354,4 @@ fieldset.choice{ border:0; padding:0; min-width:0; }
 .thanks p{ margin-bottom:1rem; }
 .peek{ padding-top:clamp(3rem,7vw,5rem); padding-bottom:clamp(3rem,7vw,5rem); }
 .peek .prose-wide{ margin-bottom:1.6rem; }
+.hero-date .hero-venue{ display:inline-block; font-size:.82em; color:var(--olive-deep); margin-top:.15em; }
