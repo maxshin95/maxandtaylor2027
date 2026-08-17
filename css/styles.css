@@ -5,10 +5,10 @@
 ———————————————————————————————————————————————— */
 
 /* Variable fonts: one file per style covers the full weight range */
-@font-face { font-family:'Cormorant Garamond'; src:url('../fonts/CormorantGaramond-400.woff2') format('woff2'); font-weight:400 600; font-style:normal; font-display:swap; }
-@font-face { font-family:'Cormorant Garamond'; src:url('../fonts/CormorantGaramond-400i.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
-@font-face { font-family:'EB Garamond'; src:url('../fonts/EBGaramond-400.woff2') format('woff2'); font-weight:400 500; font-style:normal; font-display:swap; }
-@font-face { font-family:'EB Garamond'; src:url('../fonts/EBGaramond-400i.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:'Cormorant Garamond'; src:url('/fonts/CormorantGaramond-400.woff2') format('woff2'); font-weight:400 600; font-style:normal; font-display:swap; }
+@font-face { font-family:'Cormorant Garamond'; src:url('/fonts/CormorantGaramond-400i.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
+@font-face { font-family:'EB Garamond'; src:url('/fonts/EBGaramond-400.woff2') format('woff2'); font-weight:400 500; font-style:normal; font-display:swap; }
+@font-face { font-family:'EB Garamond'; src:url('/fonts/EBGaramond-400i.woff2') format('woff2'); font-weight:400; font-style:italic; font-display:swap; }
 
 :root{
   --cream:#FAF7EF;
@@ -306,3 +306,49 @@ html:not(.no-js) .in{ opacity:1; transform:none; }
   .travel-grid{ grid-template-columns:1fr; }
   .lb-prev{ left:.4rem; } .lb-next{ right:.4rem; }
 }
+
+/* ————— save-the-date: address card ————— */
+.address{ background:var(--wash); }
+.address .prose-wide{ margin-bottom:clamp(1.8rem,4vw,2.6rem); }
+.card{
+  background:var(--cream); border:1px solid var(--hairline); border-radius:16px;
+  padding:clamp(1.4rem,4vw,2.4rem); box-shadow:0 30px 60px -40px rgba(46,53,32,.35);
+}
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+.field{ margin-bottom:1.1rem; }
+.field label, .field legend{
+  display:block; font-size:.74rem; letter-spacing:.24em; text-transform:uppercase;
+  color:var(--olive); font-weight:500; margin-bottom:.45rem;
+}
+.field .opt{ letter-spacing:.06em; text-transform:none; font-style:italic; font-weight:400; opacity:.8; }
+.field input[type=text], .field input[type=email]{
+  width:100%; font:inherit; font-size:1.05rem; color:var(--ink);
+  background:#fff; border:1px solid var(--hairline); border-radius:10px;
+  padding:.75rem .9rem; outline:none; transition:border-color .2s, box-shadow .2s;
+}
+.field input:focus{ border-color:var(--olive); box-shadow:0 0 0 3px rgba(96,109,46,.14); }
+.field input::placeholder{ color:rgba(46,53,32,.38); }
+.field-row{ display:grid; grid-template-columns:1fr; gap:0 .8rem; }
+@media (min-width:560px){ .field-row{ grid-template-columns:2fr .8fr .9fr; } }
+fieldset.choice{ border:0; padding:0; }
+.pill{ display:inline-flex; margin:0 .5rem .5rem 0; cursor:pointer; }
+.pill input{ position:absolute; opacity:0; width:1px; height:1px; }
+.pill span{
+  font-size:.82rem; letter-spacing:.14em; text-transform:uppercase; font-weight:500;
+  color:var(--olive); border:1px solid var(--hairline); border-radius:999px;
+  padding:.6rem 1.05rem; transition:background .2s, color .2s, border-color .2s;
+}
+.pill input:checked + span{ background:var(--olive); color:var(--cream); border-color:var(--olive); }
+.pill input:focus-visible + span{ box-shadow:0 0 0 3px rgba(96,109,46,.25); }
+.submit-row{ margin-top:1.4rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+.submit-row .btn{ cursor:pointer; }
+.submit-row .btn[disabled]{ opacity:.6; cursor:default; transform:none; box-shadow:none; }
+.form-msg{ font-size:.95rem; color:var(--olive-deep); min-height:1.3em; }
+.form-msg.bad{ color:var(--berry); }
+.thanks{ text-align:center; }
+.thanks-mono{ font-family:var(--display); font-size:1.4rem; letter-spacing:.2em; color:var(--olive); }
+.thanks-mono em{ color:var(--berry); font-style:italic; }
+.thanks h3{ font-family:var(--display); font-weight:500; font-size:clamp(1.7rem,4vw,2.4rem); color:var(--ink); margin:.6rem 0 .8rem; }
+.thanks p{ margin-bottom:1rem; }
+.peek{ padding-top:clamp(3rem,7vw,5rem); padding-bottom:clamp(3rem,7vw,5rem); }
+.peek .prose-wide{ margin-bottom:1.6rem; }
