@@ -5,7 +5,7 @@ Taylor & Max's wedding website — May 29, 2027, The Willows, Villanova PA.
 Static site, no build step. Edit the files, push to `main`, GitHub Pages serves it.
 
 - `index.html` — save-the-date front door: names, date, mailing-address form (posts to FormSubmit → max.shin.95@gmail.com, redirects to `/thanks/`)
-- `details/index.html` — the full wedding website (story, venue, travel, photos)
+- `details/index.html` — redirect to `/` (full site retired 2026-08-18 per Max; save-the-date is the whole site for now)
 - `thanks/index.html` — post-submit thank-you page
 - `css/styles.css` — palette + styling (colors from Taylor's inspiration board)
 - `js/main.js` — countdown, scroll reveals, photo lightbox
