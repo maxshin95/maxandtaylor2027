@@ -135,7 +135,7 @@ a:hover{ text-decoration-color:var(--berry); }
 
 .hero-photo{ position:relative; justify-self:start; width:min(100%,460px); }
 .hero-photo img{
-  width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; object-position:34% 100%;
+  width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; object-position:50% 78%;
   border-radius:999px 999px 12px 12px;
   box-shadow:0 30px 60px -30px rgba(46,53,32,.45);
 }
